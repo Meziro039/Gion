@@ -30,6 +30,6 @@ function Share(){
 }
 
 function Tweet(){
-    const Message = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?word=" + encodeURI(Output) + "&hashtags=擬音ジェネレーター";
+    const Message = "「"+ Output + "」" + "&url=https://" + location.host + location.pathname + "?word=" + encodeURI(Output) + "&hashtags=擬音ジェネレーター";
     window.open("https://twitter.com/intent/tweet?text=" + Message,"noopener","noreferrer");
 }
