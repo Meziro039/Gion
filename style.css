@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Mukashi';
+    src: url(https://raw.githubusercontent.com/Meziro039/Gion/main/font/gomarice_mukasi_mukasi.ttf);
+}
+
+body{
+    background-color: #FFFFFF;
+    animation: gaming 10s linear infinite;
+}
+@keyframes gaming {
+    /* 色の指定 */
+    0% { background-color: rgb(207, 27, 207); }
+    33% { background-color: rgb(205, 205, 26); }
+    66% { background-color: rgb(24, 207, 207); }
+    100% { background-color: rgb(207, 27, 207); }
+    }
+
+div{
+    display: block;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    align-self: center;
+    border-radius: 20px;
+    border: solid 2px;
+    padding: 10px;
+    width: 75%;
+    max-width: 350px;
+    min-width: 200px;
+    height: auto;
+}
+
+h2{
+    color: #FFFFFF;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    font-size: 40px;
+    font-family: Mukashi;
+}
+
+span{
+    font-size: 30px;
+    font-family: Mukashi;
+}
+
+input{
+    background-color: rgb(21, 202, 202);
+    color: #FFFFFF;
+    margin: auto;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 1px solid;
+    border-color: #FFFFFF;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 35px;
+    font-size: 25px;
+    font-family: Mukashi;
+}
