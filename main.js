@@ -21,7 +21,7 @@ function Dice(){
 
 function Share(){
     //const ShareLink = location.host + location.pathname + "?word=" + Output;
-    const ShareLink = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?word=" + Output + "\n#擬音ジェネレーター";
+    const ShareLink = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?word=" + encodeURI(Output) + "\n#擬音ジェネレーター";
     navigator.clipboard.writeText(ShareLink);
     document.getElementById("ShareBt").value = "しました";
     window.setTimeout(function(){
@@ -30,6 +30,6 @@ function Share(){
 }
 
 function Tweet(){
-    const Message = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?word=" + Output + "\n#擬音ジェネレーター";
+    const Message = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?word=" + encodeURI(Output) + "&hashtags=擬音ジェネレーター";
     window.open("https://twitter.com/intent/tweet?text=" + Message,"noopener","noreferrer");
 }
