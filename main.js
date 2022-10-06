@@ -24,17 +24,18 @@ else {
 }
 
 function Dice(){
-    RandomTop = hiragana[Math.floor(Math.random() * 100)];
-    RandomEnd = hiragana[Math.floor(Math.random() * 100)];
-    Output = (RandomTop + RandomEnd + RandomTop + RandomEnd);
+    RandomTop = Math.floor(Math.random() * 100);
+    RandomEnd = Math.floor(Math.random() * 100);
+    Output = (hiragana[RandomTop] + hiragana[RandomEnd] + hiragana[RandomTop] + hiragana[RandomEnd]);
 
     //表示更新
     document.getElementById("gion").textContent = Output;
+    console.log(RandomTop);
 }
 
 function Share(){
     // シェアテキスト生成
-    const ShareText = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?Seed=" + RandomTop + "," + RandomEnd + "\n#擬音ジェネレーター";
+    const ShareText = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?Seed=" + String(RandomTop) + "," + String(RandomEnd) + "\n#擬音ジェネレーター";
     navigator.clipboard.writeText(ShareText);
 
     //コピー完了表示
@@ -46,7 +47,7 @@ function Share(){
 
 function Tweet(){
     // 投稿URL生成
-    const TweetText = "https://twitter.com/intent/tweet?" + "hashtags=擬音ジェネレーター" + "&text=「"+ Output + "」" + "&url=" + "https://" + location.host + location.pathname + "?Seed=" + RandomTop + "," + RandomEnd;
+    const TweetText = "https://twitter.com/intent/tweet?" + "hashtags=擬音ジェネレーター" + "&text=「"+ Output + "」" + "&url=" + "https://" + location.host + location.pathname + "?Seed=" + String(RandomTop) + "," + String(RandomEnd);
     window.open(TweetText, "noopener", "noreferrer");
 }
 
