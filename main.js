@@ -31,5 +31,5 @@ function Share(){
 
 function Tweet(){
     const Message = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?word=" + Output + "\n#擬音ジェネレーター";
-    window.open("https://twitter.com/?status=" + Message,"noopener","noreferrer");
+    window.open("https://twitter.com/intent/tweet?text=" + Message,"noopener","noreferrer");
 }
