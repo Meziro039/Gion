@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/Meziro039/Gion/main/ogp.png)
 # 概要
 [これ](https://github.com/melt-adzuki/gion-gen)を~~パクッて~~参考に作りました。  
 サイト[Click](https://gion.meziro.net)
