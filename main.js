@@ -35,7 +35,7 @@ function Dice(){
 
 function Share(){
     // シェアテキスト生成
-    const ShareText = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?seed=" + String(RandomTop) + "," + String(RandomEnd) + "\n#擬音ジェネレーター";
+    const ShareText = "「"+ Output + "」" + "\n" + "https://" + location.host + location.pathname + "?seed=" + String(RandomTop) + "," + String(RandomEnd) + "\n#擬音ジェネレータ";
     navigator.clipboard.writeText(ShareText);
 
     //コピー完了表示
@@ -47,7 +47,7 @@ function Share(){
 
 function Tweet(){
     // 投稿URL生成
-    const TweetText = "https://twitter.com/intent/tweet?" + "hashtags=擬音ジェネレーター" + "&text=「"+ Output + "」" + "&url=" + "https://" + location.host + location.pathname + "?seed=" + String(RandomTop) + "," + String(RandomEnd);
+    const TweetText = "https://twitter.com/intent/tweet?" + "hashtags=擬音ジェネレータ" + "&text=「"+ Output + "」" + "&url=" + "https://" + location.host + location.pathname + "?seed=" + String(RandomTop) + "," + String(RandomEnd);
     window.open(TweetText, "noopener", "noreferrer");
 }
 
